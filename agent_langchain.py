@@ -17,8 +17,10 @@ api_key = st.secrets["GEMINI_API_KEY"]
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
     google_api_key=api_key,
-    google_search_retrieval=True, # <--- The Built-in Search Hand
-    temperature=0
+    temperature=0,
+    model_kwargs={
+        "tools": [{"google_search": {}}]
+    }
 )
 
 # 3. The Prompt (Personality + History)
