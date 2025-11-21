@@ -1,5 +1,6 @@
 streamlit
-langchain>=0.2.0
-langchain-google-genai>=1.0.3
-langchain-community>=0.2.0
+langchain==0.2.14
+langchain-community==0.2.12
+langchain-google-genai==1.0.9
+langchain-core==0.2.33
 google-search-results
