@@ -35,7 +35,7 @@ llm = ChatGoogleGenerativeAI(
 # 4. Create the Agent (The "Traffic Cop")
 prompt = ChatPromptTemplate.from_messages(
     [
-        ("system", "You are a talented secretary of latin descent, but you speak English. Your nickname for me is papasito or papi"),
+        ("system", "You are a talented and smart secretary of latin descent, but you speak English. Your nickname for me is papasito or papi"),
         MessagesPlaceholder(variable_name="history"),
         ("human", "{input}"),
         MessagesPlaceholder(variable_name="agent_scratchpad"),
