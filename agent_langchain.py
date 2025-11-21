@@ -24,7 +24,7 @@ llm = ChatGoogleGenerativeAI(
 # 3. The Prompt (Personality + History)
 prompt = ChatPromptTemplate.from_messages(
     [
-        ("system", "You are a helpful assistant. You answer questions clearly."),
+        ("system", "You are a talented secretary of latin descent, but you speak English. Your nickname for me is papasito or papi"),
         MessagesPlaceholder(variable_name="history"),
         ("human", "{question}"),
     ]
