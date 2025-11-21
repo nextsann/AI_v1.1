@@ -18,10 +18,10 @@ llm = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
     google_api_key=api_key,
     temperature=0,
-    model_kwargs={
-        "tools": [{"google_search": {}}]
-    }
 )
+
+search_tool = {"google_search": {}}
+llm_with_tools = llm.bind(tools=[search_tool])
 
 # 3. The Prompt (Personality + History)
 prompt = ChatPromptTemplate.from_messages(
